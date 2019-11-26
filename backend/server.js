@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const excercisesRouter = require('./routes/exercises')
+const exercisesRouter = require('./routes/exercises')
 const usersRouter = require('./routes/users')
 
 
@@ -16,7 +16,7 @@ app.use(express.json());
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 
-app.use('/excercises', excercisesRouter)
+app.use('/exercises', exercisesRouter)
 app.use('/users', usersRouter)
 
 
